@@ -1,0 +1,138 @@
+<h2 class="display-6">Companies_Locations Table</h2>
+
+{{!-- Create a table --}}
+<table class="table table-striped table-hover" id="Companies_Locations-table">
+
+    {{!-- Header section --}}
+    <thead>
+
+        {{!-- For just the first row, we print each key of the row object as a header cell so we
+        know what each column means when the page renders --}}
+        <tr>
+            {{#each data.[0]}}
+            <th>
+                {{@key}}
+            </th>
+            {{/each}}
+            <th>delete</th>
+        </tr>
+    </thead>
+
+    {{!-- Body section --}}
+    <tbody>
+
+        {{!-- For each row, print each attribute in order --}}
+        {{#each data}}
+        <tr data-value={{this.company_location_ID}}>
+            <td>{{this.company_location_ID}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.location}}</td>
+            <td><button onclick="delete_company_location({{this.company_location_ID}})"
+                    class="btn btn-danger">Delete</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+            {{!-- Form to add a record to the table --}}
+            <form id="add-company_location-form-ajax">
+                <h3 class="display-6">Create New Row</h3>
+
+                <div class="row">
+
+                    <div class="form-group col-12">
+                        <label for="input-companyID">company name: </label>
+                        <select class="form-control" name="input-companyID" id="input-companyID">
+                            <option>-select-</option>
+                            {{#each companies}}
+                            <option value="{{this.companyID}}">{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label for="input-locationID">location: </label>
+                        <select class="form-control" name="input-locationID" id="input-locationID">
+                            <option>-select-</option>
+                            {{#each locations}}
+                            <option value="{{this.locationID}}">{{this.location}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+
+                <input type="submit" value="Create" class="btn btn-primary">
+            </form>
+        </div>
+
+        <div class="col">
+            {{!-- Form to search the table --}}
+            <form id="search-company-html" method='GET' action='/companies_locations'>
+                <h3 class="display-6">Search Table</h3>
+                <div class="form-group col-12">
+                    <label for="name">Search by company name: </label>
+                    <input class="form-control" type="text" name="name" id="input-name-html-search"
+                        placeholder="company name">
+                </div>
+
+                <input type="submit" value="Search" class="btn btn-primary">
+                <a href='/companies_locations'><button class="btn btn-primary">Reset Table</button></a>
+            </form>
+        </div>
+
+        <div class="col">
+            {{!-- Form to update the table --}}
+            <form id="update-company_location-form-ajax">
+                <h3 class="display-6">Update Row</h3>
+
+                <div class="form-group col-12">
+                    <label for="mySelectCompany_Location">Update by company_location_ID: </label>
+                    <select class="form-control" name="input-company_location_ID" id="mySelectCompany_Location">
+                        <option>-select-</option>
+                        {{#each data}}
+                        <option value="{{this.company_location_ID}}">{{this.company_location_ID}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group col-12">
+                        <label for="input-companyID-update">company name: </label>
+                        <select class="form-control" name="input-companyID-update" id="input-companyID-update">
+                            <option>-select-</option>
+                            {{#each companies}}
+                            <option value="{{this.companyID}}">{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label for="input-locationID-update">location: </label>
+                        <select class="form-control" name="input-locationID-update" id="input-locationID-update">
+                            <option>-select-</option>
+                            {{#each locations}}
+                            <option value="{{this.locationID}}">{{this.location}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+
+                <input type="submit" value="Update" class="btn btn-primary">
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+{{!-- Embed our javascript to handle the DOM manipulation and AJAX request --}}
+<script src="./js/add_company_location.js"></script>
+
+<script src="./js/delete_company_location.js"></script>
+
+<script src="./js/update_company_location.js"></script>

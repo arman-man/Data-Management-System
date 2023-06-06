@@ -1,0 +1,158 @@
+<h2 class="display-6">Postings Table</h2>
+
+{{!-- Create a table --}}
+<table class="table table-striped table-hover" id="Postings-table">
+
+    {{!-- Header section --}}
+    <thead>
+
+        {{!-- For just the first row, we print each key of the row object as a header cell so we
+        know what each column means when the page renders --}}
+        <tr>
+            {{#each data.[0]}}
+            <th>
+                {{@key}}
+            </th>
+            {{/each}}
+            <th>delete</th>
+        </tr>
+    </thead>
+
+    {{!-- Body section --}}
+    <tbody>
+
+        {{!-- For each row, print each attribute in order --}}
+        {{#each data}}
+        <tr data-value={{this.postingID}}>
+            <td>{{this.postingID}}</td>
+            <td>{{this.position}}</td>
+            <td>{{this.salary}}</td>
+            <td>{{this.company_location}}</td>
+            <td>{{this.source}}</td>
+            <td><button onclick="deletePosting({{this.postingID}})" class="btn btn-danger">Delete</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<div class="container">
+    <div class="row">
+
+
+        <div class="col">
+            {{!-- Form to add a record to the table --}}
+            <form id="add-posting-form-ajax">
+                <h3 class="display-6">Create New Row</h3>
+
+                <div class="row">
+
+                    <div class="form-group col-12">
+                        <label for="input-position">position: </label>
+                        <input class="form-control" type="text" name="input-position" id="input-position"
+                            placeholder="position">
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label for="input-salary">salary: </label>
+                        <input class="form-control" type="number" name="input-salary" id="input-salary"
+                            placeholder="salary">
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label for="input-company_location_ID">company_location: </label>
+                        <select class="form-control" name="input-company_location_ID" id="input-company_location_ID">
+                            <option>-select-</option>
+                            {{#each companies_locations}}
+                            <option value="{{this.company_location_ID}}">{{this.company_location}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label for="input-source">source: </label>
+                        <input class="form-control" type="text" name="input-source" id="input-source"
+                            placeholder="source">
+                    </div>
+                </div>
+
+                <input type="submit" value="Create" class="btn btn-primary">
+            </form>
+        </div>
+
+        <div class="col">
+            {{!-- Form to search the table --}}
+            <form id="search-posting-html" method='GET' action='/postings'>
+                <h3 class="display-6">Search Table</h3>
+
+                <div class="form-group col-12">
+                    <label for="position">Search by position: </label>
+                    <input class="form-control" type="text" name="position" id="input-position-html-search"
+                        placeholder="position">
+                </div>
+
+                <input type="submit" value="Search" class="btn btn-primary">
+                <a href='/postings'><button class="btn btn-primary">Reset Table</button></a>
+            </form>
+        </div>
+
+        <div class="col">
+            {{!-- Form to update the table --}}
+            <form id="update-posting-form-ajax">
+                <h3 class="display-6">Update Row</h3>
+
+                <div class="form-group col-12">
+                    <label for="mySelectPosting">Update by postingID: </label>
+                    <select class="form-control" name="input-postingID" id="mySelectPosting">
+                        <option>-select-</option>
+                        {{#each data}}
+                        <option value="{{this.postingID}}">{{this.postingID}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group col-12">
+                        <label for="input-position-update">position: </label>
+                        <input class="form-control" type="text" name="input-position-update" id="input-position-update"
+                            placeholder="position">
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label for="input-salary-update">salary: </label>
+                        <input class="form-control" type="number" name="input-salary-update" id="input-salary-update"
+                            placeholder="salary">
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label for="input-company_location_ID-update">company_location: </label>
+                        <select class="form-control" name="input-company_location_ID-update"
+                            id="input-company_location_ID-update">
+                            <option>-select-</option>
+                            {{#each companies_locations}}
+                            <option value="{{this.company_location_ID}}">{{this.company_location}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label for="input-source-update">source: </label>
+                        <input class="form-control" type="text" name="input-source-update" id="input-source-update"
+                            placeholder="source">
+                    </div>
+                </div>
+
+                <input type="submit" value="Update" class="btn btn-primary">
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+{{!-- Embed our javascript to handle the DOM manipulation and AJAX request --}}
+<script src="./js/add_posting.js"></script>
+
+<script src="./js/delete_posting.js"></script>
+
+<script src="./js/update_posting.js"></script>

@@ -1,0 +1,101 @@
+<h2 class="display-6">Statuses Table</h2>
+
+{{!-- Create a table --}}
+<table class="table table-striped table-hover" id="Statuses-table">
+
+    {{!-- Header section --}}
+    <thead>
+
+        {{!-- For just the first row, we print each key of the row object as a header cell so we
+        know what each column means when the page renders --}}
+        <tr>
+            {{#each data.[0]}}
+            <th>
+                {{@key}}
+            </th>
+            {{/each}}
+            <th>delete</th>
+        </tr>
+    </thead>
+
+    {{!-- Body section --}}
+    <tbody>
+
+        {{!-- For each row, print each attribute in order --}}
+        {{#each data}}
+        <tr data-value={{this.statusID}}>
+            <td>{{this.statusID}}</td>
+            <td>{{this.status}}</td>
+            <td><button onclick="deleteStatus({{this.statusID}})" class="btn btn-danger">Delete</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+            {{!-- Form to add a record to the table --}}
+            <form id="add-status-form-ajax">
+                <h3 class="display-6">Create New Row</h3>
+
+                <div class="form-group col-12">
+                    <label for="input-status">status: </label>
+                    <input class="form-control" type="text" name="input-status" id="input-status" placeholder="status">
+                </div>
+                <input type="submit" value="Create" class="btn btn-primary">
+            </form>
+        </div>
+
+
+        <div class="col">
+            {{!-- Form to search the table --}}
+            <form id="search-status-html" method='GET' action='/statuses'>
+                <h3 class="display-6">Search Table</h3>
+
+                <div class="form-group col-12">
+                    <label for="status">Search by status: </label>
+                    <input class="form-control" type="text" name="status" id="input-status-html-search"
+                        placeholder="status">
+                </div>
+                <input type="submit" value="Search" class="btn btn-primary">
+                <a href='/statuses'><button class="btn btn-primary">Reset Table</button></a>
+            </form>
+        </div>
+
+        <div class="col">
+            {{!-- Form to update the table --}}
+            <form id="update-status-form-ajax">
+                <h3 class="display-6">Update Row</h3>
+
+                <div class="form-group col-12">
+                    <label for="mySelectStatus">Update by status: </label>
+                    <select class="form-control" name="input-status" id="mySelectStatus">
+                        <option>-select-</option>
+                        {{#each data}}
+                        <option value="{{this.statusID}}">{{this.status}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class="form-group col-12">
+                    <label for="input-status-update">status: </label>
+                    <input class="form-control" type="text" name="input-status-update" id="input-status-update"
+                        placeholder="status">
+                </div>
+
+                <input type="submit" value="Update" class="btn btn-primary">
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+{{!-- Embed our javascript to handle the DOM manipulation and AJAX request --}}
+<script src="./js/add_status.js"></script>
+
+<script src="./js/delete_status.js"></script>
+
+<script src="./js/update_status.js"></script>
