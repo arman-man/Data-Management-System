@@ -3,7 +3,7 @@ Created a full-stack application of a database system for managing job applicati
 
 Implemented the front-end using Handlebars.js, HTML, Bootstrap.
 
-Implemented the back-end using Node.js, Express.js, REST API, SQL.
+Implemented the back-end using Node.js, Express.js, SQL.
 
 ## Entity Relationship Diagram
 <img width="550" alt="ERD" src="https://github.com/arman-man/Job-Application-Management-System/assets/84875686/6dd76b3a-b4d0-4671-a887-aa87b0b2f4c6">
