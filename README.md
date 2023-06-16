@@ -1,7 +1,7 @@
 # Job-Application-Management-System
 Created a full-stack application of a database system for managing job applications.
 
-Implemented the front-end using Handlebars.js, HTML/CSS, Bootstrap.
+Implemented the front-end using Handlebars.js, HTML, CSS, Bootstrap.
 
 Implemented the back-end using Node.js, Express.js, SQL/MySQL.
 
