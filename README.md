@@ -1,8 +1,6 @@
 # Job-Application-Management-System
 Created a full-stack application of a database system for managing job applications.
 
-Created a full-stack application of a database system for managing job applications.
-
 Implemented a responsive user interface by leveraging the features of Handlebars.js, HTML, CSS, and Bootstrap, ensuring seamless user interactions and an optimized viewing experience.
 
 Developed a robust back-end system by implementing a RESTful API with Node.js and Express.js, while also ensuring efficient data management with an SQL/MySQL database server.
