@@ -139,5 +139,3 @@ INSERT INTO Applications (postingID, statusID, date) VALUES (:postingIDInput, :s
 
 -- delete an application
 DELETE FROM Applications WHERE applicationID = :applicationID_selected_from_applications_page;
-
-123
