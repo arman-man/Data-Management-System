@@ -1,9 +1,9 @@
 # Job-Application-Management-System
-Developed a full-stack application of a database system for managing job applications.
+Developed an application of a database system for managing job applications.
 
 Created a responsive user interface using Handlebars.js, HTML, CSS, and Bootstrap.
 
-Implemented a RESTful API using Node.js and Express.js, with a SQL/MySQL database.
+Implemented a RESTful API using Node.js and Express.js, with an SQL/MySQL database.
 
 ## Entity Relationship Diagram
 <img width="550" alt="ERD" src="https://github.com/arman-man/Job-Application-Management-System/assets/84875686/6dd76b3a-b4d0-4671-a887-aa87b0b2f4c6">
