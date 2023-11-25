@@ -1,5 +1,5 @@
 # Job-Application-Management-System
-Developed an application of a database system for managing job applications.
+Developed a web application of a database system for managing job applications.
 
 Created a responsive user interface using Handlebars.js, HTML, CSS, and Bootstrap.
 
