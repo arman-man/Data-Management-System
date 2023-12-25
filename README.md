@@ -1,5 +1,5 @@
 # Job-Application-Management-System
-Developed a web application of a database system for job application management.
+Developed a web application for managing job applications, integrating a user-friendly interface with a robust database for effective data organization.
 
 Implemented a RESTful API with Node.js and Express.js, backed by MySQL, and created a responsive user interface using Handlebars.js, HTML, CSS, and Boostrap.
 
