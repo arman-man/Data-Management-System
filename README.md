@@ -1,9 +1,9 @@
 # Job-Application-Management-System
-Developed a web application for managing job applications, integrating a user-friendly interface with a robust database for effective data organization.
+Developed a web application for job application management that enhances the process of tracking and managing applications.
 
-Implemented a RESTful API with Node.js and Express.js, backed by MySQL, and created a responsive user interface using Handlebars.js, HTML, CSS, and Boostrap.
+Implemented a RESTful API with Node.js and Express.js, and created a responsive user-interface using Handlebars.js, HTML, CSS, and Boostrap.
 
-Designed and executed a comprehensive data model in MySQL, ensuring efficient data retrieval and storage, and seamlessly integrated it with the back-end for optimized performance
+Designed and implemented a comprehensive data model in MySQL, focusing on optimizing back-end performance for system efficiency and scalability.
 
 ## Entity Relationship Diagram
 <img width="550" alt="ERD" src="https://github.com/arman-man/Job-Application-Management-System/assets/84875686/6dd76b3a-b4d0-4671-a887-aa87b0b2f4c6">
