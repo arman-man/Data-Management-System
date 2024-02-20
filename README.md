@@ -1,5 +1,5 @@
 # Job-Application-Management-System
-Developed a web application for job application management that enhances the process of tracking and managing applications.
+Developed a web application to enhance the job search experience by enabling users with an effective UI for managing job postings and applications.
 
 Implemented a RESTful API with Node.js and Express.js, and created a responsive user-interface using Handlebars.js, HTML, CSS, and Boostrap.
 
