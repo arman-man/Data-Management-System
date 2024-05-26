@@ -1,11 +1,11 @@
 # Job-Application-Management-System
-Developed a database management system for job seekers to more effectively track postings and applications.
+Developed a database management system for effectively tracking job applications.
 
-Designed and implemented a comprehensive data model in MySQL.
+Designed a MySQL data model and created SQL queries for back-end database operations.
 
-Created SQL queries for data management and retrieval for back-end operations.
+Created technical documentation, including API specs, database diagrams, and end-user manuals.
 
-Implemented a RESTful API with JavaScript/Node.js, and a user-interface with HTML/CSS/Boostrap.
+Deployed onto Google Cloud Platform, using Docker for containerization.
 
 ## Entity Relationship Diagram
 <img width="550" alt="ERD" src="https://github.com/arman-man/Job-Application-Management-System/assets/84875686/6dd76b3a-b4d0-4671-a887-aa87b0b2f4c6">
