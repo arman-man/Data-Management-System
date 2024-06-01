@@ -1,4 +1,5 @@
-# Job-Application-Management-System
+# Database-Management-System
+
 Developed a database management system for effectively tracking job applications.
 
 Designed a MySQL data model and created SQL queries for back-end database operations.
