@@ -4,7 +4,7 @@ Developed a database management system for effectively tracking job applications
 
 Designed a MySQL data model and created SQL queries for back-end database operations.
 
-Created technical documentation, including API specs, database diagrams, and end-user manuals.
+Created technical documents, including API specs, database diagrams, and end-user manuals.
 
 Deployed onto Google Cloud Platform, using Docker for containerization.
 
