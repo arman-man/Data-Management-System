@@ -4,9 +4,9 @@ Developed a data management system for effectively tracking job applications.
 
 Designed a MySQL data model and created SQL queries for back-end database operations.
 
-Created technical documents, including API specs, database diagrams, and end-user manuals.
+Implemented a REST API with JavaScript/Node.js, and user-interface with HTML/CSS/Boostrap.
 
-Deployed onto Google Cloud Platform, using Docker for containerization.
+Created technical documents, including API specs, database diagrams, and user manuals.
 
 ## Entity Relationship Diagram
 <img width="550" alt="ERD" src="https://github.com/arman-man/Job-Application-Management-System/assets/84875686/6dd76b3a-b4d0-4671-a887-aa87b0b2f4c6">
