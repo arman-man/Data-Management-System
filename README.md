@@ -1,12 +1,10 @@
 # Data-Management-System
 
-Developed a data management system for effectively tracking job applications.
+Designed a relational MySQL data model and wrote SQL queries supporting back-end operations.
 
-Designed a MySQL data model and created SQL queries for back-end database operations.
+Built a REST API with Node.js to connect application logic with the database layer.
 
-Implemented a REST API with JavaScript/Node.js, and user-interface with HTML/CSS/Boostrap.
-
-Created technical documents, including API specs, database diagrams, and user manuals.
+Developed a web interface using HTML, CSS, and Bootstrap.
 
 ## Entity Relationship Diagram
 <img width="550" alt="ERD" src="https://github.com/arman-man/Job-Application-Management-System/assets/84875686/6dd76b3a-b4d0-4671-a887-aa87b0b2f4c6">
